@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film List</title>
+</head>
+<body>
+    <h1>Film List</h1>
+    <ul>
+        {% for film in films %}
+        <li>
+            <h2>{{ film.title }}</h2>
+            <p>{{ film.description }}</p>
+            <p><strong>Review:</strong> {{ film.review }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_film' %}">Add a New Film</a>
+</body>
+</html>
